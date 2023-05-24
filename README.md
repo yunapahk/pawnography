@@ -1,4 +1,9 @@
 # Pawnography
+A chess puzzle website that focuses on how to utilize pawns.
+
+# Technologies Used
+
+
 
 | Day | Task | 
 | -------------- | -------------- |
