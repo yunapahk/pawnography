@@ -9,6 +9,7 @@ A chess puzzle website that focuses on how to utilize pawns.
 * Bootstrap
 
 
+# Planning
 | Day | Task | 
 | -------------- | -------------- |
 | 1   | Complete Board with Pieces  | 
