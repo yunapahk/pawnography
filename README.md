@@ -2,7 +2,11 @@
 A chess puzzle website that focuses on how to utilize pawns.
 
 # Technologies Used
-
+* HTML
+* CSS
+* JavaScript
+* jQuery
+* Bootstrap
 
 
 | Day | Task | 
