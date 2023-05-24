@@ -1,7 +1,7 @@
 # pawnography
 
 | Day | Task | 
-| -------------- | -------------- | -------------- |
+| -------------- | -------------- |
 | 1   | Complete Board with Pieces  | 
 | 2   | Make sure that pieces move options   | 
 | 3   | Add Hint Feature   | 
