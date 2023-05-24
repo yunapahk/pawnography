@@ -1,5 +1,5 @@
 # Pawnography
-A chess puzzle website that focuses on how to utilize pawns.
+A website where chess players can practice puzzles.
 
 # Technologies Used
 * HTML
