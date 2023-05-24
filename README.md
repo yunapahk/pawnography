@@ -20,3 +20,9 @@ A chess puzzle website that focuses on how to utilize pawns.
 | 7   | ?   | 
 | 8   | CSS Styling   | 
 | 9   | CSS Styling   | 
+
+# Getting Started
+Click here to see the app!
+
+# Future Enhancements
+TBD
