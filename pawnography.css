@@ -1,3 +1,24 @@
-background {
-    
+body {
+    background-color: aliceblue;
 }
+
+#chessboard {
+    width: 100%;
+    text-align: center;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    display: inline-block;
+ }
+
+ .square-purple {
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    display: inline-block;
+ }
+
