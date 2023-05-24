@@ -1,4 +1,4 @@
-# pawnography
+# Pawnography
 
 | Day | Task | 
 | -------------- | -------------- |
