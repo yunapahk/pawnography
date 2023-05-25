@@ -20,7 +20,7 @@ A website where chess players can practice puzzles.
 | 6   | Create a celebration animation for completed puzzle   | 
 | 7   | List options of openings  | 
 | 8   | CSS Styling or another API if there is time   | 
-| 9   | Complete Favicon and get Render ready | 
+| 9   | Complete Favicon, gif tutorial for github, get Render ready | 
 
 # Getting Started
 Click here to see the app!
