@@ -1,24 +1,30 @@
 body {
-    background-color: aliceblue;
+    background-color: ;
 }
 
 #chessboard {
-    width: 100%;
+    width: 70%;
     text-align: center;
+    display: block;
+    margin: 0 auto;
+    padding-top: 150px;
 }
 
 .square {
     width: 100px;
     height: 100px;
-    border: 1px solid black;
+    border: 5px solid black;
     display: inline-block;
+    margin: 0 auto;
  }
 
  .square-purple {
-    background-color: grey;
+    background-color: rgb(107, 44, 185);
     width: 100px;
     height: 100px;
-    border: 1px solid black;
+    border: 5px solid black;
     display: inline-block;
+    margin: 0 auto;
  }
 
+ 
