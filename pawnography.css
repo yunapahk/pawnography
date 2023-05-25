@@ -1,13 +1,16 @@
 body {
-    background-color: ;
+    background-color: grey;
 }
 
 #chessboard {
     width: 70%;
     text-align: center;
     display: block;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     margin: 0 auto;
-    padding-top: 50px;
+    gap: 0;
 }
 
 .square {
@@ -16,6 +19,7 @@ body {
     border: 5px solid black;
     display: inline-block;
     margin: 0 auto;
+    
  }
 
  .square-purple {
@@ -27,4 +31,11 @@ body {
     margin: 0 auto;
  }
 
+ /* Pieces */
+ .square::before {
+    content: "\265A"; /* Unicode value for black chess rook */
+    font-size: 150px;
+    position:relative;
+    top: -10px;
+  }
  
