@@ -12,15 +12,15 @@ A website where chess players can practice puzzles.
 # Planning
 | Day | Task | 
 | -------------- | -------------- |
-| 1   | Complete Board with Pieces  | 
-| 2   | Make sure that pieces move options   | 
+| 1   | Complete Board with Pieces using Unicode  | 
+| 2   | Make sure that pieces have move options   | 
 | 3   | Add Hint Feature   | 
 | 4   | Add how pieces move   | 
-| 5   | ?   | 
-| 6   | ?   | 
-| 7   | ?   | 
-| 8   | CSS Styling   | 
-| 9   | CSS Styling   | 
+| 5   | Create boolean for puzzle completion| 
+| 6   | Create a celebration animation for completed puzzle   | 
+| 7   | List options of openings  | 
+| 8   | CSS Styling or another API if there is time   | 
+| 9   | Render ready | 
 
 # Getting Started
 Click here to see the app!
