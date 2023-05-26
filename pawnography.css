@@ -1,7 +1,3 @@
-body {
-    background-color: grey;
-}
-
 #chessboard {
     width: 40%;
     text-align: center;
@@ -32,6 +28,11 @@ body {
     margin: 0 auto;
  }
 
+ .navbar {
+    background-color:rgb(107, 44, 185)
+ }
+
+ 
 
 
  
