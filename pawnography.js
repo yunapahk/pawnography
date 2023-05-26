@@ -1,7 +1,7 @@
 const settings = {
 	async: true,
 	crossDomain: true,
-	url: 'https://chess-puzzles2.p.rapidapi.com/random?number_of_puzzles=3',
+	url: 'https://chess-puzzles2.p.rapidapi.com/advanced?rating=1200&number_of_moves=4&number_of_puzzles=10',
 	method: 'GET',
 	headers: {
 		'X-RapidAPI-Key': '02f3b69c35msh4a0aadf57595284p121757jsn8b3c7e60e543',
@@ -9,7 +9,14 @@ const settings = {
 	}
 };
 
-$.ajax(settings).done(function (response) {
-	console.log(response);
-});
-
+// use console.log(fetch(url)) to make sure fetch is promise based
+fetch(settings.url, {
+   method: settings.method,
+   headers: {
+     'X-RapidAPI-Key': settings.headers['X-RapidAPI-Key'],
+     'X-RapidAPI-Host': settings.headers['X-RapidAPI-Host']
+   }
+ })
+   .then(res => res.json())
+   .then(data => console.log(data))
+   .catch(error => console.log('ERROR: ', error));
