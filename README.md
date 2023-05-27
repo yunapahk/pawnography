@@ -13,8 +13,8 @@ A website where chess players can practice puzzles.
 | Day | Task | 
 | -------------- | -------------- |
 | 1   | Create chess board with annotation and pieces(Unicode)  | 
-| 2   | Create Boolean for puzzple API   | 
-| 3   | Create nav bar   | 
+| 2   | Create nav bar, onClick/onHover effect, Drag n Drop   | 
+| 3   | Create logic for puzzle API  | 
 | 4   | Create buttons for: hints, forward/back, and answer | 
 | 5   | Make pieces highlight square for moveable options | 
 | 6   | Create a celebration animation for completed puzzle   | 
