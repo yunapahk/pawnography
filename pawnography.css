@@ -1,75 +1,106 @@
-body {
-   margin: 0;
-   padding: 0;
- }
+/* YouTube link for styling navbar hamburger menu */
+/* https://www.youtube.com/watch?v=At4B7A4GOPg */
 
-#chessboard {
-    width: 40%;
-    text-align: center;
-    display: block;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    margin: 0 auto;
-    gap: 0;
-    padding-top: 150px;
-    position: relative;
-}
-
-.square {
-    width: 80px;
-    height: 80px;
-    border: 5px solid black;
-    display: inline-block;
-    margin: 0 auto;
-    
- }
-
- .square-purple {
-    background-color: rgb(150, 85, 229);
-    width: 80px;
-    height: 80px;
-    border: 5px solid black;
-    display: inline-block;
-    margin: 0 auto;
- }
-
- .navbar-custom {
-   background-color: rgb(130, 66, 209);
-   width: 100%;
-   padding: 0;
-   margin: 0;
- }
-
- .navbar,
-.navbar * {
+* {
   box-sizing: border-box;
 }
 
-.navbar-container {
-   width: 100%;
- }
+body {
+  margin: 0;
+  padding: 0;
+}
 
- .solution {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
- }
- 
- .skip {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   margin-top: 50px; /* Adjust the margin as needed */
- }
- 
- /* Media queries */
- @media (max-width: 768px) {
-   .solution,
-   .skip {
-     top: 70%; 
-   }
- }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.navbar-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-links li {
+  list-style: none;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  padding: 1rem;
+  display: block;
+}
+
+.navbar-links li:hover {
+  background-color: rgb(92, 91, 91);
+}
+
+.toggle-button {
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
+
+
+#board1 {
+  margin: 0 auto; 
+  margin-top: 60px;
+}
+
+.bottom-buttons {
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-around; 
+}
+
+.btn-group li:hover {
+  background-color: rgb(92, 91, 91);
+}
+
+
+/* Media query */
+@media (max-width: 600px) {
+  .toggle-button {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-links li {
+    text-align: center;
+  }
+
+  .navbar-links li a {
+    padding: .5rem 1rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+}
