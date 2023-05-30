@@ -1,3 +1,8 @@
+body {
+   margin: 0;
+   padding: 0;
+ }
+
 #chessboard {
     width: 40%;
     text-align: center;
@@ -8,6 +13,7 @@
     margin: 0 auto;
     gap: 0;
     padding-top: 150px;
+    position: relative;
 }
 
 .square {
@@ -28,12 +34,42 @@
     margin: 0 auto;
  }
 
- .navbar {
-    background-color:rgb(107, 44, 185)
+ .navbar-custom {
+   background-color: rgb(130, 66, 209);
+   width: 100%;
+   padding: 0;
+   margin: 0;
  }
 
+ .navbar,
+.navbar * {
+  box-sizing: border-box;
+}
 
+.navbar-container {
+   width: 100%;
+ }
 
-
-
+ .solution {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+ }
  
+ .skip {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   margin-top: 50px; /* Adjust the margin as needed */
+ }
+ 
+ /* Media queries */
+ @media (max-width: 768px) {
+   .solution,
+   .skip {
+     top: 70%; 
+   }
+ }
+

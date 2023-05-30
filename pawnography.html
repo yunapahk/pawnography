@@ -6,123 +6,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pawnography</title>
 
-  <!--Axios -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script> -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
 
+    <!-- Linking JavaScript and CSS -->
+    <script src="./pawnography.js" defer></script>
+    <link rel="stylesheet" href="./pawnography.css">
 
-  <!--jQuery -->
-      <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
-
-
-  <!-- linking js and css -->
-      <script src="./pawnography.js"></script>
-      <link rel="stylesheet" href="./pawnography.css">
-
-  <!-- linking Bootswatch -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/pulse/bootstrap.min.css">
+    <!-- Linking Bootswatch -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
 <body>
-  <!-- Navbar created with Bootswatch/Bootstrap -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <!-- Navbar created with Bootswatch/Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Pawnography</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-          aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarColor01">
-            <ul class="navbar-nav me-auto">
-              <li class="nav-item">
-                <a class="nav-link active" href="#">Home
-                  <span class="visually-hidden"></span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Openings</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About Us</a>
-              </li>
+            <a class="navbar-brand" href="#">Pawnography</a>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home
+                            <span class="visually-hidden"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Openings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </nav>
+    </nav>
+
+    <div class="solution">
+        <button type="button" class="btn btn-primary btn-lg">Skip</button>
+        <i class="bi bi-chevron-compact-left"></i>
+    </div>
+
+    <div class="skip">
+        <button type="button" class="btn btn-secondary btn-lg">Solution</button>
+    </div>
 
     <div id="chessboard">
-        
         <!-- 1st -->
-        <div row="1" column="1" class="square-purple" player="black" place="A8-rook">
-            <span class="number" style="float: left; margin-top: 0; margin-left: 0; width: 15px; ">8</span>
+        <div row="1" column="1" class="square-purple" player="black" place="Ra8" draggable="true"> 
+          <span class="number" style="float: left; margin-top: 0; margin-left: 0; width: 15px; ">8</span>
             <span class="black-rook" style="font-size: 80px; line-height: 60px; position: relative; left: -5px;">&#9820;</span>
-        </div>
-        <div row="1" column="2" class="square" player="black" place="B8-knight">
+         </div>
+        <div row="1" column="2" class="square" player="black" place="Nb8">
             <span style="font-size:50px;"></span>
             <span class="black-knight" style="font-size: 80px; line-height: 60px; position: relative; left: -1px;">&#9822;</span>
         </div>
-        <div row="1" column="3" class="square-purple" player="black" place="C8-bishop">
+        <div row="1" column="3" class="square-purple" player="black" place="Bc8">
             <span style="font-size: 15px;"></span>
             <span class="black-bishop" style="font-size: 80px; line-height: 60px; position: relative; left: -1px;">&#9821;</span>
         </div>
-        <div row="1" column="4" class="square" player="black" place="black-king">
+        <div row="1" column="4" class="square" player="black" place="Ke8">
             <span style="font-size:50px;"></span>
             <span class="black-king" style="font-size: 80px; line-height: 60px; position: relative; left: -1px;">&#9819;</span>
         </div>
-        <div row="1" column="5" class="square-purple" player="black" place="black-queen">
+        <div row="1" column="5" class="square-purple" player="black" place="Qd8">
             <span style="font-size:50px;"></span>
             <span class="black-queen" style="font-size: 90px; line-height: 50px; position: relative; left: -1px;">&#9818;</span>
         </div>
-        <div row="1" column="6" class="square" player="black" place="F8-bishop">
+        <div row="1" column="6" class="square" player="black" place="Bf8">
             <span style="font-size:50px;"></span>
             <span class="black-bishop" style="font-size: 80px; line-height: 60px; position: relative; left: -1px;">&#9821;</span>
         </div>
-        <div row="1" column="7" class="square-purple" player="black" place="G8-knight">
+        <div row="1" column="7" class="square-purple" player="black" place="Ng8">
             <span style="font-size:50px;"></span>
             <span class="black-knight" style="font-size: 80px; line-height: 60px; position: relative; left: -1px;">&#9822;</span>
         </div>
-        <div row="1" column="8" class="square" player="black" place="H8-rook">
+        <div row="1" column="8" class="square" player="black" place="Rh8">
             <span style="font-size:50px;"></span>
             <span class="black-rook" style="font-size: 80px; line-height: 60px; position: relative; left: -1px;">&#9820;</span>
         </div>
-        <br/>
+        <br/> 
 
 
         <!-- 2nd -->
-        <div row="2" column="1" class="square" player="black" place="black-pawn">
+         <div row="2" column="1" class="square" player="black" place="a7"> 
             <span style="font-size:50px;"></span>
             <span class="number" style="float: left; margin-top: 0; margin-left: 0; width: 15px;">7</span>
             <span class="black-pawn" style="font-size: 50px; line-height: 40px; position: relative; right: 7px;">&#9823;</span>
         </div>
-        <div row="2" column="2" class="square-purple" player="black" place="black-pawn">
+        <div row="2" column="2" class="square-purple" player="black" place="b7">
             <span style="font-size:50px;"></span>
             <span class="black-pawn" style="font-size: 50px; line-height: 40px;">&#9823;</span>
         </div>
-        <div row="2" column="3" class="square" player="black" place="black-pawn">
+        <div row="2" column="3" class="square" player="black" place="c7">
             <span style="font-size:50px;"></span>
             <span class="black-pawn" style="font-size: 50px; line-height: 40px;">&#9823;</span>
         </div>
-        <div row="2" column="4" class="square-purple" player="black" place="black-pawn">
+        <div row="2" column="4" class="square-purple" player="black" place="d7">
             <span style="font-size:50px;"></span>
             <span class="black-pawn" style="font-size: 50px; line-height: 40px;">&#9823;</span>
         </div>
-        <div row="2" column="5" class="square" player="black" place="black-pawn">
+        <div row="2" column="5" class="square" player="black" place="e7">
             <span style="font-size:50px;"></span>
             <span class="black-pawn" style="font-size: 50px; line-height: 40px;">&#9823;</span>
         </div>
-        <div row="2" column="6" class="square-purple" player="black" place="black-pawn">
+        <div row="2" column="6" class="square-purple" player="black" place="f7">
             <span style="font-size:50px;"></span>
             <span class="black-pawn" style="font-size: 50px; line-height: 40px;">&#9823;</span>
         </div>
-        <div row="2" column="7" class="square" player="black" place="black-pawn">
+        <div row="2" column="7" class="square" player="black" place="g7">
             <span style="font-size:50px;"></span>
             <span class="black-pawn" style="font-size: 50px; line-height: 40px;">&#9823;</span>
         </div>
-        <div row="2" column="8" class="square-purple" player="black" place="black-pawn">
+        <div row="2" column="8" class="square-purple" player="black" place="h7">
             <span style="font-size:50px;"></span>
             <span class="black-pawn" style="font-size: 50px; line-height: 40px;">&#9823;</span>
         </div>
-        <br/>
+        <br/> 
 
 
         <!-- 3rd -->
-        <div row="3" column="1" class="square-purple" player="black" place="">
+         <div row="3" column="1" class="square-purple" player="black" place=""> 
             <span class="number" style="float: left; margin-top: 0; margin-left: 0; width: 15px;">6</span>
         </div>
         <div row="3" column="2" class="square" player="black" place=""></div>
@@ -133,10 +134,10 @@
         <div row="3" column="7" class="square-purple" player="black" place=""></div>
         <div row="3" column="8" class="square" player="black" place=""></div>
         <br/>
-        
+         
 
         <!-- 4th -->
-        <div row="4" column="1" class="square" player="black" place="">
+         <div row="4" column="1" class="square" player="black" place=""> 
             <span class="number" style="float: left; margin-top: 0; margin-left: 0; width: 15px;">5</span>
         </div>
         <div row="4" column="2" class="square-purple" player="black" place=""></div>
@@ -146,11 +147,11 @@
         <div row="4" column="6" class="square-purple" player="black" place=""></div>
         <div row="4" column="7" class="square" player="black" place=""></div>
         <div row="4" column="8" class="square-purple" player="black" place=""></div>
-        <br/>
+        <br/> 
 
 
         <!-- 5th -->
-        <div row="5" column="1" class="square-purple" player="black" place="">
+         <div row="5" column="1" class="square-purple" player="black" place="">
             <span class="number" style="float: left; margin-top: 0; margin-left: 0; width: 15px;">4</span>
         </div>
         <div row="5" column="2" class="square" player="black" place=""></div>
@@ -160,11 +161,11 @@
         <div row="5" column="6" class="square" player="black" place=""></div>
         <div row="5" column="7" class="square-purple" player="black" place=""></div>
         <div row="5" column="8" class="square" player="black" place=""></div>
-        <br/>
+        <br/> 
 
 
         <!-- 6th -->
-        <div row="6" column="1" class="square" player="black" place="pawn">
+        <div row="6" column="1" class="square" player="black" place="pawn"> 
             <span class="number" style="float: left; margin-top: 0; margin-left: 0; width: 15px;">3</span>
         </div>
         <div row="6" column="2" class="square-purple" player="black" place=""></div>
@@ -174,36 +175,36 @@
         <div row="6" column="6" class="square-purple" player="black" place=""></div>
         <div row="6" column="7" class="square" player="black" place=""></div>
         <div row="6" column="8" class="square-purple" player="black" place=""></div>
-        <br/>
+        <br/> 
 
 
         <!-- 7th -->
-        <div row="7" column="1" class="square-purple" player="black" place="white-pawn">
+         <div row="7" column="1" class="square-purple" player="black" place="a2"> 
             <span style="font-size:50px;"></span>
             <span class="number" style="float: left; margin-top: 0; margin-left: 0; width: 15px;">2</span>
             <span class="white-pawn" style="font-size: 70px; line-height: 40px; position: relative; right: 8px;">&#9817;</span>
         </div>
-        <div row="7" column="2" class="square" player="black" place="white-pawn">
+        <div row="7" column="2" class="square" player="black" place="b2">
             <span style="font-size:50px;"></span>
             <span class="white-pawn" style="font-size: 70px; line-height: 40px;">&#9817;</span>
         </div>
-        <div row="7" column="3" class="square-purple" player="black" place="white-pawn">
+        <div row="7" column="3" class="square-purple" player="black" place="c2">
             <span style="font-size:50px;"></span>
             <span class="white-pawn" style="font-size: 70px; line-height: 40px;">&#9817;</span>
         </div>
-        <div row="7" column="4" class="square" player="black" place="white-pawn">
+        <div row="7" column="4" class="square" player="black" place="d2">
             <span style="font-size:50px;"></span>
             <span class="white-pawn" style="font-size: 70px; line-height: 40px;">&#9817;</span>
         </div>
-        <div row="7" column="5" class="square-purple" player="black" place="white-pawn">
+        <div row="7" column="5" class="square-purple" player="black" place="">
             <span style="font-size:50px;"></span>
             <span class="white-pawn" style="font-size: 70px; line-height: 40px;">&#9817;</span>
         </div>
-        <div row="7" column="6" class="square" player="black" place="white-pawn">
+        <div row="7" column="6" class="square" player="black" place="a7">
             <span style="font-size:50px;"></span>
             <span class="white-pawn" style="font-size: 70px; line-height: 40px;">&#9817;</span>
         </div>
-        <div row="7" column="7" class="square-purple" player="black" place="white-pawn">
+        <div row="7" column="7" class="square-purple" player="black" place="a8">
             <span style="font-size:50px;"></span>
             <span class="white-pawn" style="font-size: 70px; line-height: 40px;">&#9817;</span>
         </div>
@@ -211,11 +212,11 @@
             <span style="font-size:50px;"></span>
             <span class="white-pawn" style="font-size: 70px; line-height: 40px;">&#9817;</span>
         </div>
-        <br/>
+        <br/> 
 
 
         <!-- 8th -->
-        <div row="8" column="1" class="square" player="black" place="A1-rook">
+         <div row="8" column="1" class="square" player="black" place="A1-rook"> 
             <span style="font-size:50px;"></span>
             <span class="number" style="float: left; margin-top: 0; margin-left: 0; width: 15px;">1</span>
             <span class="letter" style="float: right; margin-right: 10px; margin-top: 50px; height: 10px;">a</span>
@@ -264,10 +265,6 @@
             <span class="letter" style="float: right; margin-right: 10px; margin-top: 40px; height: 10px;">h</span>
             <span class="B2-knight" style="font-size: 80px; position: relative; bottom: 50px; left: 6px;">&#9814;</span>
         </div>
-        
-
-    
-        <button type="button" class="btn btn-primary btn-lg">Large button</button>
     
 </body>
 </html>
